@@ -18,12 +18,12 @@ bool fire(int distance, int speed, int gravity) {
   double angle{};
   std::cin >> angle;
   int actual{calcProj(angle, speed, gravity)};
-  if (actual > distance) {
-    std::cout << "you overshot by " << actual - distance << std::endl;
+  if (abs(actual - distance) <= 1) {
+    std::cout << "Congratuations, you won!" << std::endl;
   } else if (actual < distance) {
     std::cout << "you undershot by " << distance - actual << std::endl;
   } else {
-    std::cout << "Congratuations, you won!" << std::endl;
+    std::cout << "you overshot by " << actual - distance << std::endl;
     return true;
   }
   return false;
