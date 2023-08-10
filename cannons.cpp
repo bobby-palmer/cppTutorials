@@ -9,8 +9,8 @@ int randRange(int minDist, int maxDist) {
   return distance;
 }
 int calcProj(double angle, int speed, int gravity) {
-  int time = sin(angle) * speed * 2 / gravity;
-  int hSpeed = cos(angle) * speed;
+  int time = sin(angle * M_PI / 180) * speed * 2 / gravity;
+  int hSpeed = cos(angle * M_PI / 180) * speed;
   return time * hSpeed;
 }
 bool fire(int distance, int speed, int gravity) {
