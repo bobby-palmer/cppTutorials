@@ -32,7 +32,7 @@ int main() {
   int balls{20};
   int distance{randRange(300, 400)};
   int speed{200};
-  int gravity{10};
+  int gravity{320};
   std::cout << "Your enemy is " << distance << " ft away and you have " << balls << " cannonballs to hit him with" << std::endl;
   for (int i{0}; i < balls; ++i){
     if (fire(distance, speed, gravity)) return 0;
